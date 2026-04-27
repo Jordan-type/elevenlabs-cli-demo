@@ -1,0 +1,22 @@
+{
+  "name": "elevenlabs-cli-demo",
+  "version": "1.0.0",
+  "description": "A small Node.js CLI that demos four ElevenLabs APIs: TTS, voices, sound effects, and speech-to-text.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "elevenlabs-demo": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.0.0",
+    "@inquirer/prompts": "^7.0.0",
+    "dotenv": "^16.4.0"
+  },
+  "license": "MIT"
+}
