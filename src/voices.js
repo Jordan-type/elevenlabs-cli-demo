@@ -4,7 +4,13 @@ import { runTextToSpeech } from "./tts.js";
 
 export async function runVoicePicker() {
   console.log("  Fetching voices...");
-  const result = await client.voices.search({ pageSize: 20 });
+
+  // Filter to 'default' voices: the ones every account has access to via the
+  // API regardless of plan. Library voices would 402 on free tier.
+  const result = await client.voices.search({
+    voiceType: "default",
+    pageSize: 30,
+  });
   const voices = result.voices ?? [];
 
   if (voices.length === 0) {

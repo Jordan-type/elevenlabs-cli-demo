@@ -39,6 +39,14 @@ This demo only needs:
 Everything else can stay on `No Access`. Setting a small monthly credit limit
 on the key is a good habit — it caps the blast radius if the key ever leaks.
 
+## Free tier note
+
+ElevenLabs blocks library voices over the API on the free plan. To stay
+free-tier-friendly, the demo asks the API for **default** voices only —
+these are available to every account regardless of plan. If you upgrade
+later and want access to the full voice library in the picker, drop the
+`voiceType: "default"` filter in `src/voices.js`.
+
 ## Project layout
 
 ```
